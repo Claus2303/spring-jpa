@@ -1,6 +1,5 @@
-package de.claus.spring.jpa.adapter.h2;
+package de.claus.spring.jpa.adapter.h2.jdbc;
 
-import de.claus.spring.jpa.adapter.h2.Person;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;

@@ -1,7 +1,7 @@
 package de.claus.spring.jpa;
 
-import de.claus.spring.jpa.adapter.h2.Person;
-import de.claus.spring.jpa.adapter.h2.PersonJdbcDAO;
+import de.claus.spring.jpa.adapter.h2.jdbc.Person;
+import de.claus.spring.jpa.adapter.h2.jdbc.PersonJdbcDAO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

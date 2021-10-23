@@ -1,4 +1,4 @@
-package de.claus.spring.jpa.adapter.h2;
+package de.claus.spring.jpa.adapter.h2.jdbc;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
