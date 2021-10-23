@@ -29,6 +29,9 @@ public class JPADemoApplication implements CommandLineRunner {
                 repository.update(new Person(10004, "Tanja", "Ebensfeld", new Date())));
         logger.info("update 10003 id -> {}",
                 repository.update(new Person(10003, "Hund", "Ebensfeld", new Date())));
+
+        repository.delete(10001);
+        logger.info("findAll id -> {}", repository.findAll());
         /**
         logger.info("All users -> {}", repository.findAll());
 
