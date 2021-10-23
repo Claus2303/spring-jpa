@@ -10,8 +10,8 @@ import java.util.Date;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity
-@Table(name="person")
+//@Entity
+//@Table(name="person")
 @NamedQuery(name="find_all_persons", query="select p from Person p")
 public class Person {
     @Id
