@@ -1,5 +1,8 @@
 package de.claus.spring.jpa.adapter.h2.jpa.advanced;
 
+import de.claus.spring.jpa.adapter.h2.jpa.relation.Review;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -9,6 +12,8 @@ import javax.transaction.Transactional;
 @Transactional
 @Repository
 public class CourseRepository {
+
+    private Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Autowired
     EntityManager entityManager;
@@ -62,5 +67,6 @@ public class CourseRepository {
         Course course1 = new Course("DDD Second");
         entityManager.persist(course1);
     }
+
 
 }

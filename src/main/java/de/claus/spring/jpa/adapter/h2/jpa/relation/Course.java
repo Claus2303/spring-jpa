@@ -4,11 +4,10 @@ import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 @Data
 @Entity
@@ -24,10 +23,19 @@ public class Course {
     private LocalDateTime lastUpdatedDate;
     @CreationTimestamp
     private LocalDateTime createdDate;
+    @OneToMany(mappedBy = "course")//Damit holt er sich die Beziehung über die andere Tabelle
+    private List<Review> reviews = new ArrayList<>();
 
     protected Course(){}
 
     public Course(String name){
         this.name = name;
+    }
+
+    public void addReview(Review review){
+        this.reviews.add(review);
+    }
+    public void removeReview(Review review){
+        this.reviews.remove(review);
     }
 }

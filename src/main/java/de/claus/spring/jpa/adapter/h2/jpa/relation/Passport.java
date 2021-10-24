@@ -21,4 +21,13 @@ public class Passport {
     public Passport(String number){
         this.number = number;
     }
+
+    @Override
+    public String toString() {
+        return "Passport{" +
+                "id=" + id +
+                ", number='" + number + '\'' +
+                ", student=" + student.getId() +
+                '}';
+    }
 }

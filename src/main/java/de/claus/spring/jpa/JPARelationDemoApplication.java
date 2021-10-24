@@ -1,5 +1,6 @@
 package de.claus.spring.jpa;
 
+import de.claus.spring.jpa.adapter.h2.jpa.relation.CourseRelRepository;
 import de.claus.spring.jpa.adapter.h2.jpa.relation.StudentRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,13 +15,15 @@ public class JPARelationDemoApplication implements CommandLineRunner {
 
     @Autowired
     StudentRepository repository;
+    @Autowired
+    CourseRelRepository courseRepository;
     public static void main(String[] args) {
         SpringApplication.run(JPARelationDemoApplication.class, args);
     }
 
     @Override
     public void run(String... args) throws Exception {
+        courseRepository.addReviewsForCourse();
 
-        repository.saveStudentWithPassport();
     }
 }

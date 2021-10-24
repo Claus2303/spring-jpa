@@ -44,11 +44,11 @@ Insert Into Student (ID, NAME, PASSPORT_ID)
 values (20004, 'Tanja',40004);
 
 
-Insert Into Review (ID, RATING, DESCRIPTION)
-values (50001, '1', 'SUPER');
-Insert Into Review (ID, RATING, DESCRIPTION)
-values (50002, '2', 'SUPER');
-Insert Into Review (ID, RATING, DESCRIPTION)
-values (50003, '3', 'SUPER');
-Insert Into Review (ID, RATING, DESCRIPTION)
-values (50004, '4', 'SUPER');
+Insert Into Review (ID, RATING, DESCRIPTION, course_id)
+values (50001, '1', 'SUPER', 10001);
+Insert Into Review (ID, RATING, DESCRIPTION, course_id)
+values (50002, '2', 'SUPER', 10001);
+Insert Into Review (ID, RATING, DESCRIPTION, course_id)
+values (50003, '3', 'SUPER', 10001);
+Insert Into Review (ID, RATING, DESCRIPTION, course_id)
+values (50004, '4', 'SUPER', 10003);

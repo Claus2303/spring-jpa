@@ -22,9 +22,6 @@ public class JPAAdvancedDemoApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        Course course = repository.findById(10001L);
-        logger.info("Course {}",course);
-        //repository.deleteById(10001L);
-        repository.save(new Course("Microservices"));
+
     }
 }

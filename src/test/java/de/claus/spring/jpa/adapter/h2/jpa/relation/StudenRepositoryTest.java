@@ -48,4 +48,13 @@ public class StudenRepositoryTest {
 
         //ERst zum SChluss werden die Änderungen an die Datenbank versendet
     }
+
+    @Test
+    @Transactional
+    public void retrievePassportAndPassportAndAssociatedStudent(){
+        //Eager fetch
+        Passport passport = entityManager.find(Passport.class, 40001L);
+        logger.info("Student -> {}", passport.getStudent());
+        logger.info("Passport -> {}", passport);
+    }
 }

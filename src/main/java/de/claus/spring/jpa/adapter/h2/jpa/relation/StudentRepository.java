@@ -48,4 +48,17 @@ public class StudentRepository {
 
         //ERst zum SChluss werden die Änderungen an die Datenbank versendet
     }
+    @Transactional
+    public void doSomething(){
+        //Create Object
+
+        //entityManager.persist(user1); --> er würde nur die Sequence aufrufen
+        //entityManager.persist(user1); --> er würde nur die Sequence aufrufen
+
+        //Change user1
+        //Change user2
+        //entityManager.flush(); Nur durch explizites Aufrufen von flush würde auf die Datenbank geschrieben
+       //Sonst erst wenn alles durch ist würde wirklich auf die Datenbank geschrieben, um einen Rollback einfacher machen zu kennen
+
+    }
 }
