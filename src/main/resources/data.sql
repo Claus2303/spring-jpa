@@ -24,3 +24,31 @@ values (10002, 'Claus Course1',sysdate(), sysdate());
 
 Insert Into Course (ID, NAME, created_date, last_updated_date)
 values (10003, 'Claus Course2',sysdate(), sysdate());
+
+Insert Into Passport (ID, NUMBER)
+values (40001, 'E123456');
+Insert Into Passport (ID, NUMBER)
+values (40002, 'D123456');
+Insert Into Passport (ID, NUMBER)
+values (40003, 'F123456');
+Insert Into Passport (ID, NUMBER)
+values (40004, 'G123456');
+
+Insert Into Student (ID, NAME, PASSPORT_ID)
+values (20001, 'Claus',40001);
+Insert Into Student (ID, NAME, PASSPORT_ID)
+values (20002, 'Philipp',40002);
+Insert Into Student (ID, NAME, PASSPORT_ID)
+values (20003, 'Hannah',40003);
+Insert Into Student (ID, NAME, PASSPORT_ID)
+values (20004, 'Tanja',40004);
+
+
+Insert Into Review (ID, RATING, DESCRIPTION)
+values (50001, '1', 'SUPER');
+Insert Into Review (ID, RATING, DESCRIPTION)
+values (50002, '2', 'SUPER');
+Insert Into Review (ID, RATING, DESCRIPTION)
+values (50003, '3', 'SUPER');
+Insert Into Review (ID, RATING, DESCRIPTION)
+values (50004, '4', 'SUPER');

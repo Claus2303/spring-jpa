@@ -9,7 +9,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Data
-@Entity
+//@Entity
 //@NamedQuery(name="query_get_all_courses", query = "Select c From Course c")
 @NamedQueries(value={
             @NamedQuery(name="query_get_all_courses", query = "Select c From Course c"),
