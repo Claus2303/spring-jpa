@@ -2,10 +2,7 @@ package de.claus.spring.jpa.adapter.h2.jpa.relation;
 
 import lombok.Data;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @Data
@@ -17,6 +14,8 @@ public class Passport {
 
     @Column(nullable = false)
     private String number;
+    @OneToOne(fetch = FetchType.LAZY, mappedBy = "passport")//wenn mappedBy dann wird keine ID in Passport eingefügt --> Dies hat Auswirkungen auf die SQLs
+    private Student student;
 
     protected Passport(){};
     public Passport(String number){
