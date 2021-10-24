@@ -42,5 +42,15 @@ class CourseRepositoryTest {
         Course course1 = repository.findById(10001L);
         assertEquals("Claus Update Course", course1.getName());
     }
-    //        repository.save(new Course("Microservices"));
+    @Test
+    public void playWithEntityManager() {
+        logger.info("playWithEntityManager start");
+        repository.playWithEntityManager();
+    }
+
+    @Test
+    public void playWithEntityManager1() {
+        logger.info("playWithEntityManager1 start");
+        repository.playWithEntityManager1();
+    }
 }
