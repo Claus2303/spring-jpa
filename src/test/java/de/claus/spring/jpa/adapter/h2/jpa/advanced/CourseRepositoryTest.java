@@ -53,4 +53,6 @@ class CourseRepositoryTest {
         logger.info("playWithEntityManager1 start");
         repository.playWithEntityManager1();
     }
+
+
 }

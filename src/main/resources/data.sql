@@ -52,3 +52,8 @@ Insert Into Review (ID, RATING, DESCRIPTION, course_id)
 values (50003, '3', 'SUPER', 10001);
 Insert Into Review (ID, RATING, DESCRIPTION, course_id)
 values (50004, '4', 'SUPER', 10003);
+
+Insert Into student_course(student_id, course_id) values(20001, 10001);
+Insert Into student_course(student_id, course_id) values(20002, 10001);
+Insert Into student_course(student_id, course_id) values(20003, 10001);
+Insert Into student_course(student_id, course_id) values(20001, 10003);

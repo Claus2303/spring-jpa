@@ -16,7 +16,7 @@ public class Review {
     private String rating;
 
     private String description;
-    @ManyToOne
+    @ManyToOne //Eager Fetching
     private Course course;
 
     protected Review(){

@@ -7,6 +7,7 @@ import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
 import javax.transaction.Transactional;
+import java.util.List;
 
 @Repository
 @Transactional
@@ -36,5 +37,17 @@ public class CourseRelRepository {
         //save it to database
         entityManager.persist(review1);
         entityManager.persist(review2);
+    }
+
+    public void addReviewsForCourse(Long courseId, List<Review> reviews){
+        //get the Course 10003
+        Course course = findById(courseId);
+        logger.info("Aktueller Course 10003 -> {}",course);
+
+        for (Review review : reviews){
+            course.addReview(review);
+            review.setCourse(course);
+            entityManager.persist(course);
+        }
     }
 }

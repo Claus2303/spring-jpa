@@ -23,8 +23,10 @@ public class Course {
     private LocalDateTime lastUpdatedDate;
     @CreationTimestamp
     private LocalDateTime createdDate;
-    @OneToMany(mappedBy = "course")//Damit holt er sich die Beziehung über die andere Tabelle
+    @OneToMany(mappedBy = "course" )//Damit holt er sich die Beziehung über die andere Tabelle ////Lazy Fetching ist Default
     private List<Review> reviews = new ArrayList<>();
+    @ManyToMany(mappedBy = "courses")
+    private List<Student> students = new ArrayList<>();//Wenn die Beziehung auf beiden Seiten ist würden 2 Tabellen erzeugt
 
     protected Course(){}
 
@@ -37,5 +39,19 @@ public class Course {
     }
     public void removeReview(Review review){
         this.reviews.remove(review);
+    }
+
+    public void addStudent(Student student){
+        this.students.add(student);
+    }
+
+    @Override
+    public String toString() {
+        return "Course{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", lastUpdatedDate=" + lastUpdatedDate +
+                ", createdDate=" + createdDate +
+                '}';
     }
 }
