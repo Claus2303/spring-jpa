@@ -1,6 +1,5 @@
 package de.claus.spring.jpa.adapter.h2.jpa.relation;
 
-import de.claus.spring.jpa.adapter.h2.jpa.advanced.Course;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -60,5 +59,27 @@ public class StudentRepository {
         //entityManager.flush(); Nur durch explizites Aufrufen von flush würde auf die Datenbank geschrieben
        //Sonst erst wenn alles durch ist würde wirklich auf die Datenbank geschrieben, um einen Rollback einfacher machen zu kennen
 
+    }
+
+    public void insertHardcodedStudentAndCourse(){
+        Student student = new Student("Jack");
+        Course course = new Course("Microservice 2");
+        entityManager.persist(student);
+        entityManager.persist(course);
+
+        student.addCourse(course);
+        course.addStudent(student);
+
+        entityManager.persist(student);
+    }
+
+    public void insertStudentAndCourse(Student student, Course course){
+        entityManager.persist(student);
+        entityManager.persist(course);
+
+        student.addCourse(course);
+        course.addStudent(student);
+
+        entityManager.persist(student);
     }
 }
